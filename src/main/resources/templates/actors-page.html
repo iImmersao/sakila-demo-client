@@ -1,0 +1,21 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Actors</title>
+</head>
+<body>
+<h1>Actors page</h1>
+
+<div th:if="${actors.empty}">
+    <div>No actors found</div>
+</div>
+
+<div th:each="actors : ${actors}">
+    <p><span th:text="${actors.actorId}" /> <span th:text="${actors.firstName}" /> <span th:text="${actors.lastName}" /></p>
+</div>
+
+
+</body>
+</html>
